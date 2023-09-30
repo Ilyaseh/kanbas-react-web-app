@@ -1,35 +1,90 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet"/>  
+    <link rel="stylesheet" href="../../vendors/fontawesome/css/all.css"/>
+    <title>Bootstrap Sidebar</title>
+</head>
+<body>
 
-<table border="0" width="25%">
-    <!-- Column 1 -->
-    <td valign="top">
-        <table>
-          <tr><td><a href="navigation_profile.html"><li>Account</li></a></td></tr>
-          <tr><td><a href="#"><li>Dashboard</li></a></td></tr>
-          <tr><td><a href="navigation_courses.html"><li>Courses</li></a></td></tr>
-          <tr><td><a href="#"><li>Calendar</li></a></td></tr>
-          <tr><td><a href="#"><li>Inbox</li></a></td></tr>
-          <tr><td><a href="#"><li>History</li></a></td></tr>
-          <tr><td><a href="#"><li>Studio</li></a></td></tr>
-          <tr><td><a href="#"><li>Commons</li></a></td></tr>
-          <tr><td><a href="#"><li>Help</li></a></td></tr>
-        </table>
-      </td>
+  <div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-1 d-md-block custom-sidebar sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <div class="logo-container text-center">
+                        <img src="../images/NU_sidebar_logo.png" alt="Logo" class="sidebar-logo">
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="navigation_profile.html">
+                            <i class="fas fa-smile"></i>
+                            Account
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="navigation_courses.html">
+                            <i class="fas fa-book"></i>
+                            Courses
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-calendar-alt"></i>
+                            Calendar
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-envelope"></i>
+                            Inbox
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-history"></i>
+                            History
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-photo-video"></i>
+                            Studio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-users"></i>
+                            Commons
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-question-circle"></i>
+                            Help
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="col-md-1 padding-left-column">  <!-- New column -->
+          <ul class="list-unstyled">  <!-- Unstyled list for links -->
+              <li><a href="#">Notifications</a></li>
+              <li><a class="nav-link active" href="profile/index.html">Profile</a></li>
+              <li><a href="#">Files</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">ePortfolios</a></li>
+              <li><a href="#">Shared Content</a></li>
+              <li><a href="#">The Hub</a></li>
+              <li><a href="#">Qwickly Course Tools</a></li>
+              <li><a href="#">Global Announcements</a></li>
+          </ul>
+        </div>  
+    </div>
+</div>
 
-    <!-- Column 2 -->
-
-    <td valign="top">
-        <table>
-          <tr><td><a href="#"><li>Notifications</li></a></td></tr>
-          <tr><td><a href="profile/index.html"><li>Profile</li></a></td></tr>
-          <tr><td><a href="#"><li>Files</li></a></td></tr>
-          <tr><td><a href="#"><li>Settings</li></a></td></tr>
-          <tr><td><a href="#"><li>ePortfolios</li></a></td></tr>
-          <tr><td><a href="#"><li>Shared Content</li></a></td></tr>
-          <tr><td><a href="#"><li>The Hub</li></a></td></tr>
-          <tr><td><a href="#"><li>Qwickly Course Tools</li></a></td></tr>
-          <tr><td><a href="#"><li>Global Announcements</li></a></td></tr>
-        </table>
-      </td>
-</table>
-  
+<script src="../../vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

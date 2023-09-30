@@ -1,0 +1,84 @@
+.custom-sidebar {
+    padding: 0 !important;
+}
+
+.sidebar {
+    position: static;  /* Updated from 'fixed' to 'static' */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #000;
+    width: 85px;
+    overflow-x: hidden;
+    height: 100vh;  /* Add this line */
+
+}
+
+.sidebar .sidebar-sticky {
+    padding: 0;  /* Remove padding */
+}
+
+.sidebar .nav {
+    width: 100%;  /* Ensure nav takes full width */
+    padding-left: 0;  /* Remove padding */
+}
+
+.sidebar .nav-link {
+    color: #fff;
+    width: 100%;  /* Ensure nav-link takes full width */
+    margin: 5px 0px;  /* Adjust margin to your preference */
+    padding: 10px 0px;  /* Adjust padding to add space to the top and bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center items horizontally */
+    text-align: center;  /* Center text */
+}
+
+.sidebar .nav-link.active {
+    background-color: #fff;
+    color: #f00;
+}
+
+.sidebar .nav-link i {
+    color: #f00;
+    font-size: 24px;
+    margin-bottom: 5px;  /* Space between icon and text */
+}
+
+.sidebar .nav-link.active i {
+    color: #f00;
+}
+
+.sidebar .nav-link i.fa-user {
+    color: #fff;
+}
+
+.logo-container {
+    padding: 10px 0; 
+}
+
+.sidebar-logo {
+    width: 70px; 
+    height: auto; 
+    margin: auto; 
+}
+
+.list-unstyled a {
+    color: red;
+    text-decoration: none;
+    font-weight: 500;
+    justify-content: left;
+}
+
+.nav-link.active {
+    background-color: #fff;
+    color: #000;  
+    border-left: 2px solid #000;  
+    padding-left: 2px;  
+
+}
+
+.padding-left-column {
+    padding-left: 30px;
+}
