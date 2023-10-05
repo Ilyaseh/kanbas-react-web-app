@@ -1,84 +1,357 @@
-.custom-sidebar {
-    padding: 0 !important;
-}
-
+/* Styles for the main sidebar container */
 .sidebar {
-    position: static;  /* Updated from 'fixed' to 'static' */
+    position: fixed;  
     top: 0;
     bottom: 0;
     left: 0;
-    z-index: 100;
+    z-index: 100; 
     background-color: #000;
     width: 85px;
-    overflow-x: hidden;
-    height: 100vh;  /* Add this line */
-
+    overflow-x: hidden; 
+    height: 100vh; 
+    padding: 0;
 }
 
+/* Place column next to sticky sidebar */
+.col-md-10 {
+    margin-left: 85px;  
+}
+
+/* Styles for the sticky sidebar section */
 .sidebar .sidebar-sticky {
-    padding: 0;  /* Remove padding */
+    padding: 0;  
 }
 
+/* Styles for the navigation list within the sidebar */
 .sidebar .nav {
-    width: 100%;  /* Ensure nav takes full width */
-    padding-left: 0;  /* Remove padding */
+    width: 100%;  
+    padding-left: 0;  
 }
 
+/* Styles for individual navigation links within the sidebar */
 .sidebar .nav-link {
     color: #fff;
-    width: 100%;  /* Ensure nav-link takes full width */
-    margin: 5px 0px;  /* Adjust margin to your preference */
-    padding: 10px 0px;  /* Adjust padding to add space to the top and bottom */
+    width: 100%;  
+    margin: 5px 0px;  
+    padding: 10px 0px;  
     display: flex;
     flex-direction: column;
-    align-items: center;  /* Center items horizontally */
-    text-align: center;  /* Center text */
+    align-items: center; 
+    text-align: center;  
 }
 
+/* Styles for active navigation link within the sidebar */
 .sidebar .nav-link.active {
     background-color: #fff;
     color: #f00;
 }
 
+/* Styles for icons within navigation links */
 .sidebar .nav-link i {
     color: #f00;
     font-size: 24px;
-    margin-bottom: 5px;  /* Space between icon and text */
+    margin-bottom: 5px;  
 }
 
+/* Styles for icons within active navigation links */
 .sidebar .nav-link.active i {
     color: #f00;
 }
 
+/* Styles for user icon within navigation links */
 .sidebar .nav-link i.fa-user {
     color: #fff;
 }
 
+/* Styles for the logo container */
 .logo-container {
     padding: 10px 0; 
 }
 
+/* Styles for the sidebar logo */
 .sidebar-logo {
     width: 70px; 
     height: auto; 
     margin: auto; 
 }
 
+/* Styles for padding on the left side of the main content area */
+.padding-left-column {
+    margin-top: 10px;
+    padding-left: 20px;  
+    width: 200px;  
+}
+
+/* Styles for the list within the main content area */
+.list-unstyled {
+    padding-left: 0;  
+}
+
+/* Styles for links within the list */
 .list-unstyled a {
     color: red;
     text-decoration: none;
     font-weight: 500;
-    justify-content: left;
+    display: block; 
+    padding: 10px;  
+    word-wrap: break-word;  
 }
 
+/* Styles for active link within the list */
 .nav-link.active {
-    background-color: #fff;
-    color: #000;  
-    border-left: 2px solid #000;  
-    padding-left: 2px;  
+    border-left: 2px solid #000;
+    padding-left: 8px;  
+    color: #000;
+}
+
+/* Styles for buttons within the profile section */
+.profile-section .btn {
+    margin-bottom: 20px;
+}
+
+/* Styles for primary buttons within the profile section */
+.profile-section .btn.btn-primary {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for icons within primary buttons */
+.profile-section .btn.btn-primary i {
+    margin-right: 5px;
+}
+
+/* Styles for link buttons within the profile section */
+.profile-section .btn.btn-link {
+    color: red;
+}
+
+/* Styles for the header container within the profile section */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Styles for the section header */
+.section-header {
+    font-size: 24px;
+    padding-top: 10px;
+}
+
+/* Offset styles for icons and text within active nav-link */
+.nav-link.active .nav-icon,
+.nav-link.active .nav-text {
+    margin-left: -8px;
+}
+
+/* Styles for text within nav-link */
+.nav-text {
+    display: inline-block;
+}
+
+/* Styles for user icon */
+.user-icon{
+    color: #899499;
+    border: 2px solid #899499; 
+    border-radius: 80%; 
+    padding: 20px; 
+    font-size: 130px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* card  */
+.course-card {
+    width: 270px;
+    margin: 15px;
+    
+}
+
+/* Responsive adjustments */
+.d-flex.flex-row.flex-wrap > div {
+    flex: 1 1 20%;  
+    max-width: 20%; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .d-flex.flex-row.flex-wrap > div {
+        flex: 1 1 30%;
+        max-width: 30%;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .d-flex.flex-row.flex-wrap > div {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+}
+
+/* indentation padding */
+.indentation-padding{
+    padding-left: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+/* padding icon */
+.icon-padding{
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* padding icon secondary */
+.sec-padding{
+    padding-right: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Secondary button font styling */
+.font-sec{
+    font-size: 20px;
+    font-weight: 500;
 
 }
 
-.padding-left-column {
-    padding-left: 30px;
+/* Removes all borders */
+.no-border{
+    border: none;
+}
+
+/* Styling for a custom check icon with padding and green color */
+.custom-check{
+    padding-right: 30px;
+    color: green;
+}
+
+/* Styling for a custom plus icon with padding and green color */
+.custom-plus{
+    padding-right: 30px;
+    color: #899499;
+}
+
+/* Remove underline from link */
+.custom-link {
+    color: black !important; 
+    text-decoration: none !important; 
+}
+
+/* Centers element on small screens */
+@media (max-width: 767px) { 
+    .centered-on-sm {
+      margin-left: auto;
+      margin-right: auto;
+      float: none; 
+    }
+  }
+
+/* Adds a green border on the left side */
+.list-green-border{
+    border-left: 2px green;
+}
+
+/* White background styling taking full viewport height */
+  .bg-white {
+    background-color: white;
+    height: 100vh; 
+}
+
+/* Background styling for custom sidebar taking full viewport height */
+.custom-sidebar-bg {
+    background-color: white;
+    height: 100vh;
+}
+
+/* Flex styling for nav links to space content evenly */
+.custom-nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Styling for custom navigation icons */
+.custom-nav-icon {
+    color: #899499;
+    border: 2px solid #899499;
+    border-radius: 100%;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+/* Color for custom navigation arrow */
+.custom-nav-arrow {
+    color: #899499;
+}
+
+/* Margin for notification badges */
+.custom-notification-badge {
+    margin-right: 10px;
+}
+
+
+/* Black header with flex styling for content spacing */
+.black-header {
+    background-color: black;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+
+/* White header with flex styling for content spacing */
+.white-header {
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+/* Removes default background and margin for breadcrumb */
+.breadcrumb {
+    background: none; 
+    margin-bottom: 0; 
+}
+
+/* Black close button styling */
+.close-button-black {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+}
+
+/* White close button styling */
+.close-button-white {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Removes outline for focused close buttons */
+.close-button:focus {
+    outline: none;
+}
+
+/* Styling for navigation links with red color on smaller screens */
+.nav-link-small{
+    color:red;
+    text-decoration: none;
+    font-size: 30px;
+    margin-left: 30px;
+    margin-top: 50px;
+
+}
+
+/* Styles the hamburger icon with a white color */
+.white-hamburger .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
