@@ -1,0 +1,38 @@
+.section-header {
+    display: flex;
+    font-size: 1.5em; 
+    padding-top: 15px;
+}
+
+.course-card {
+    width: 270px;
+    margin: 15px;
+}
+
+.dashboard-container {
+    width: 100%; 
+    padding-left: 10px;
+  }
+  
+.courses-wrapper {
+    justify-content: space-between; 
+}
+
+.d-flex.flex-row.flex-wrap > div {
+    flex: 1 1 20%;  
+    max-width: 20%; 
+}
+
+@media (max-width: 1200px) {
+    .d-flex.flex-row.flex-wrap > div {
+        flex: 1 1 30%;
+        max-width: 30%;
+    }
+}
+
+@media (max-width: 992px) {
+    .d-flex.flex-row.flex-wrap > div {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+}
