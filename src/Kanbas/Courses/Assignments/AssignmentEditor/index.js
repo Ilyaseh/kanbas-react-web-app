@@ -20,9 +20,6 @@ function AssignmentEditor() {
         setTitle(event.target.value);
     };
 
-    const handleCancel = () => {
-        navigate(`/Kanbas/Courses/${courseId}/Assignments`);
-    };
 
     const handleSave = () => {
         const updatedAssignment = { ...assignment, title };
