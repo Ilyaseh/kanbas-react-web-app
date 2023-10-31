@@ -1,5 +1,4 @@
 import React from 'react';
-import db from "../../Kanbas/Database";
 import { useLocation, useParams, Route, Routes, Navigate } from 'react-router-dom';
 import CourseNavigation from "./CourseNavigation";
 import "./Courses.css";
@@ -10,14 +9,14 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 
-function Courses() {
+function Courses({ courses }) {
   const { courseId } = useParams(); 
   const location = useLocation();
 
   const pathSegments = location.pathname.split('/');
   const currentPage = pathSegments[pathSegments.length - 1] || 'Home'; 
 
-  const course = db.courses.find((c) => c._id === courseId);
+  const course = courses.find((c) => c._id === courseId);
 
   return (
     <div>

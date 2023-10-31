@@ -2,7 +2,7 @@
   width: 85px; 
 }
 
-.main-content {
-  width: calc(100% - 85px); 
+.kanbas-content {
+  margin-left: 85px; 
+  width: 100%;
 }
-
