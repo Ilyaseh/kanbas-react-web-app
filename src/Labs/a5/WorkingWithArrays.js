@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-
+const API_BASE = process.env.REACT_APP_LABS_API_BASE;
+const URL = `${API_BASE}`;
 function WorkingWithArrays() {
-    const API = "http://localhost:4000/a5/todos";
+    const API = `${URL}/todos`;
     const [todo, setTodo] = useState({
         id: 1,
         title: "NodeJS Assignment",

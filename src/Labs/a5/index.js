@@ -1,24 +1,24 @@
 import React from "react";
-// import SimpleAPIExamples from "./SimpleAPIExamples.js";
 import EncodingParametersInURLs from "./EncodingParametersInURLs.js";
 import WorkingWithObjects from "./WorkingWithObjects.js";
 import WorkingWithArrays from "./WorkingWithArrays.js";
+const API_BASE = process.env.REACT_APP_LABS_API_BASE;
+const URL = `${API_BASE}`;
 
 function Assignment5() {
     return (
       <div>
         <h1>Assignment 5</h1>
         <div className="list-group">
-          <a href="http://localhost:4000/a5/welcome"
+          <a href={`${URL}/welcome`} 
              className="list-group-item">
             Welcome
           </a>
         </div>
-        {/* <SimpleAPIExamples /> */}
         <EncodingParametersInURLs />
         <WorkingWithObjects />  
         <WorkingWithArrays />   
       </div>
     );
-  }
-  export default Assignment5;
+}
+export default Assignment5;
