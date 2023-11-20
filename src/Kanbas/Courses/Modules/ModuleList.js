@@ -30,7 +30,6 @@ function ModuleList() {
     });
   };
 
-  // Implementing handleUpdateModule
   const handleUpdateModule = async () => {
     const updatedModule = await client.updateModule(module);
     dispatch(updateModuleReducer(updatedModule)); 

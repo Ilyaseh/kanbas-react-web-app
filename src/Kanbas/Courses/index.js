@@ -9,10 +9,11 @@ import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
+const API_BASE = process.env.REACT_APP_API_BASE;
 
 function Courses() {
   const { courseId } = useParams(); 
-  const URL = "http://localhost:4000/api/courses";
+  const URL = `${API_BASE}/courses`;
   const [course, setCourse] = useState(null);
 
   const findCourseById = async (id) => {
