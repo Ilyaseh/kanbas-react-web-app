@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from "axios";
 import { useLocation, useParams, Route, Routes, Navigate } from 'react-router-dom';
 import CourseNavigation from "./CourseNavigation";
 import "./Courses.css";
@@ -9,14 +10,32 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 
-function Courses({ courses }) {
-  const { courseId } = useParams(); 
-  const location = useLocation();
+function Courses() {
+  console.log("Courses component rendered");
 
+  const { courseId } = useParams(); 
+  console.log("Parsed course ID:", courseId);
+
+  const URL = "http://localhost:4000/api/courses";
+  const [course, setCourse] = useState(null);
+
+  const findCourseById = async (id) => {
+      const response = await axios.get(`${URL}/${id}`);
+      console.log("Course data received:", response.data);
+
+      setCourse(response.data);
+  };
+
+  useEffect(() => {
+    console.log("useEffect triggered with courseId:", courseId);
+
+    findCourseById(courseId);
+  }, [courseId]);
+
+  const location = useLocation();
   const pathSegments = location.pathname.split('/');
   const currentPage = pathSegments[pathSegments.length - 1] || 'Home'; 
 
-  const course = courses.find((c) => c._id === courseId);
 
   return (
     <div>
@@ -25,7 +44,7 @@ function Courses({ courses }) {
           <FaBars className="red-text-breadcrumb me-2 red-icon" size={20} /> 
           <Breadcrumb style={{ "--bs-breadcrumb-divider": "'>'" }}>
             <Breadcrumb.Item className="red-text-breadcrumb">
-              {course ? `${course._id} ${course.name}` : 'Course not found'}
+              {course ? `${course._id.$oid} ${course.name}` : 'Course not found'}
             </Breadcrumb.Item>
             <Breadcrumb.Item className="text-black" active>
               {currentPage}
@@ -39,11 +58,10 @@ function Courses({ courses }) {
       <div className="overflow-y-scroll position-fixed bottom-0 end-0" style={{ left: "320px", top: "50px" }}>
         <Routes>
           <Route path="/" element={<Navigate to="Home" replace />} />
-          <Route path="Home" element={<Home/>} />
+          <Route path="Home" element={<Home />} />
           <Route path="Modules" element={<Modules />} />
-          <Route path="Assignments" element={<Assignments/>} />
-          <Route path="Assignments/:assignmentId" 
-                element={<AssignmentEditor/>} />
+          <Route path="Assignments" element={<Assignments />} />
+          <Route path="Assignments/:assignmentId" element={<AssignmentEditor />} />
           <Route path="Grades" element={<h1>Grades</h1>} />
         </Routes>
       </div>
