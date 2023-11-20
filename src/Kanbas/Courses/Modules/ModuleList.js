@@ -3,12 +3,12 @@ import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
   addModule,
-  deleteModule as deleteModuleReducer, // Renamed to avoid conflict
-  updateModule as updateModuleReducer, // Renamed for clarity
+  deleteModule as deleteModuleReducer, 
+  updateModule as updateModuleReducer, 
   setModule,
   setModules,
 } from "./modulesReducer";
-import * as client from "./client"; // Service functions
+import * as client from "./client"; 
 import './Modules.css';  
 import { Button, Form, Row, Col } from 'react-bootstrap';
 
@@ -33,7 +33,7 @@ function ModuleList() {
   // Implementing handleUpdateModule
   const handleUpdateModule = async () => {
     const updatedModule = await client.updateModule(module);
-    dispatch(updateModuleReducer(updatedModule)); // Dispatching updated module
+    dispatch(updateModuleReducer(updatedModule)); 
   };
 
   useEffect(() => {

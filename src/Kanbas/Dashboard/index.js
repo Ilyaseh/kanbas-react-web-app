@@ -32,9 +32,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse, deleteCourse, upd
       {courses.map((course) => (
     <div key={course._id} className="list-group-item" style={{ display: 'flex', justifyContent: 'space-between' }}>
       <Link to={`/Kanbas/Courses/${course._id.$oid}/Home`} style={{ textDecoration: 'none', color: 'black', fontSize: '20px' }}>
-      {console.log("Dashboard link course ID:", course._id.$oid)}
       {course.name}
-      
             </Link>
             <div>
               <button onClick={() => editCourse(course._id)} className="btn btn-warning" style={{ marginRight: '10px' }}>

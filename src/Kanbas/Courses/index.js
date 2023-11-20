@@ -11,31 +11,23 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 
 function Courses() {
-  console.log("Courses component rendered");
-
   const { courseId } = useParams(); 
-  console.log("Parsed course ID:", courseId);
-
   const URL = "http://localhost:4000/api/courses";
   const [course, setCourse] = useState(null);
 
   const findCourseById = async (id) => {
       const response = await axios.get(`${URL}/${id}`);
       console.log("Course data received:", response.data);
-
       setCourse(response.data);
   };
 
   useEffect(() => {
-    console.log("useEffect triggered with courseId:", courseId);
-
     findCourseById(courseId);
   }, [courseId]);
 
   const location = useLocation();
   const pathSegments = location.pathname.split('/');
   const currentPage = pathSegments[pathSegments.length - 1] || 'Home'; 
-
 
   return (
     <div>

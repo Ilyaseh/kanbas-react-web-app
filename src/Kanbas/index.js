@@ -17,11 +17,10 @@ function Kanbas() {
       const response = await axios.put(`${URL}/${updatedCourse._id}`, updatedCourse);
       if (response.status === 204) {
         setCourses(courses.map((course) => course._id === updatedCourse._id ? updatedCourse : course));
-        setCourse({ name: "", number: "", startDate: "", endDate: "" }); // Reset form
+        setCourse({ name: "", number: "", startDate: "", endDate: "" }); 
       }
     } catch (error) {
       console.error("Error updating course:", error);
-      // Handle the error appropriately
     }
   };
 
@@ -33,17 +32,15 @@ function Kanbas() {
       }
     } catch (error) {
       console.error("Error deleting course:", error);
-      // Handle the error appropriately (e.g., show a message to the user)
     }
   };
 
   const addCourse = async () => {
-    console.log("Adding course: ", course);
     const response = await axios.post(URL, course);
-    if (response.status === 200) { // Check if POST was successful
-      await findAllCourses(); // Refetch all courses
+    if (response.status === 200) { 
+      await findAllCourses(); 
     }
-    setCourse({ name: "", number: "", startDate: "", endDate: "" }); // Reset form
+    setCourse({ name: "", number: "", startDate: "", endDate: "" }); 
   };
   
 
@@ -62,9 +59,6 @@ function Kanbas() {
     startDate: "2023-09-10", 
     endDate: "2023-12-15",
   });
-
-
-
 
   return (
     <Provider store={store}>
